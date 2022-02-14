@@ -259,4 +259,5 @@ And references:
 - [https://www.cypress.io/](https://www.cypress.io/)
 - [Accordion test in design system](https://git.rikstv.no/rikstv/shared/rikstv.designsystem/-/blob/master/shared-components/src/components/accordion/Accordion.test.tsx)
 - [Cypress code in Strim.Play](https://git.rikstv.no/rikstv/apps-team/RiksTV.App.WebApps/-/tree/master/packages/tooling/cypress)
+- [This presentation](https://github.com/lfbergee/presentations)
 - I also want to be cool and have my presentation in the [terminal](https://github.com/visit1985/mdp)
