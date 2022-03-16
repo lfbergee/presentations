@@ -1,6 +1,6 @@
 %title: Cypress
 %author: lfberge
-%date: 2022-02-16
+%date: 2022-03-16
 
 -> # dev/lett/øl <-
 
@@ -11,9 +11,6 @@
 ---
 
 -> # About <-
-
-I am more or less an idiot, 
-so this presentation is in the terminal
 
 This talk is written with humor in good spirit,
 please do not be offended even if you love Java,
@@ -28,12 +25,9 @@ _I mean no harm_
 
 -> # This is how it works <-
 
-> This blocks represent "you"
+> This blocks represent "your potential counter argument"
 
-...maybe a snarky, iconic and a stupid version of "you"
-
-And I will try to respond to "you" and you, so please
-**interupt** if you have something to share
+Please **interupt** if you have something to share
 
 ---
 
@@ -42,7 +36,7 @@ And I will try to respond to "you" and you, so please
 ```
  -----------
 < lfberge   >
-< 30ish     >
+< 34ish     >
 < developer >
  -----------
         \   ^__^
@@ -54,7 +48,7 @@ And I will try to respond to "you" and you, so please
 
 ---
 
--> # Lets go <-
+-> # Let's go <-
 
 > I don't like testing
 
@@ -101,7 +95,9 @@ split the tests on as many containers as you have tests
 Well. Not like Selenium. No `stale reference error`
 Random errors are close to 0 in properly configured envs.
 
-But if your UI changes, you must update the UI tests
+But if your UI changes, you must update the UI tests.
+
+Also a good selection strategy is key.
 
 ---
 
@@ -113,10 +109,10 @@ or
 
 Really?? 
 Testing is unfortunately everyone's responsibility, 
-so don't be that guy (or gal)
+so don't be that guy
 
 And yes, even you do make mistakes
-... or at least a colleague
+...or at least a colleague might
 
 ---
 
@@ -132,6 +128,19 @@ Lets look at component testing
 
 "Traditionally" (read since 2018) we've used Jest with JSDOM for this
 
+Or Enzyme with Mocha before that 
+(if you still use that, please consider upgrading asap)
+
+## Why not test in the browser?
+
+> But Karma...
+
+> > yeah, but it's 2022 com'on people
+
+---
+
+-> # Component testing <-
+
 However testing React component in a synthetic environment has some pitfalls
 
 - Boilerplate code for days
@@ -139,12 +148,6 @@ However testing React component in a synthetic environment has some pitfalls
 - Do you actually test the component or the synthetic environment?
 - Also, do you test functionality that matters for
   the user or are you pleasing the test-coverage gods?
-
-## Why not test in the browser?
-
-> But Karma...
-
-> > yeah, but it's 2022 com'on people
 
 ---
 
@@ -185,7 +188,6 @@ But not so fast, before you rewrite all your tests
 -> # Client testing <-
 
 Components are easy, apps are hard
-Lets emulate our users, test as they use our apps
 
 - Inbuilt network intercepts
 - Intuitive getters, asserts and actions
@@ -194,10 +196,12 @@ Lets emulate our users, test as they use our apps
     - `(java|type)script`
     - mocha-syntax
     - chai expecters
-    - jQuery (its still a thing, and a quite good thing)
+    - jQuery (its still a thing and still quite good)
     - **NO JAVA** or python or ruby (looking at you Selenium)
 - Screenshots, videos, snapshots, snapshots of screenshots 🤯
 - Documentation and onboarding 🤯
+
+---
 
 -> # Client testing <-
 
@@ -205,6 +209,7 @@ Lets emulate our users, test as they use our apps
 
 - It's actually quite fun
 - It provides value immediately
+- It provides a place to handle incidents
 - It takes off the pressure off
   - critical releases
   - large refactors
@@ -221,7 +226,7 @@ Login and all services are mocked,
 thus we can have destructive tests
 
 On posts we capture the request and expect
-the data matches shape and content wise
+the data matches shape and content
 
 ---
 
@@ -233,7 +238,6 @@ describe('no external provider, user has Strim MINI', () => {
     cy.mockLogin();
     cy.mockCustomer({ viaplay: false, hbo: false, tv2play: false });
     cy.customerWithStrimMINI();
-
     cy.visit('/account');
     cy.getByDataId('tilganger').should('not.exist');
   });
@@ -245,6 +249,7 @@ describe('no external provider, user has Strim MINI', () => {
 -> # Conclusion <-
 
 I guess we all agree:
+
 1. Testing is horrible!
 2. Test automation is great!
 3. Cypress is awesome!
