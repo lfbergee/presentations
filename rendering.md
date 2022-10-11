@@ -2,7 +2,7 @@
 %author: lfberge
 %date: 2022-10-27
 
--> # dev/øl <-
+-> # dev/🍺 <-
 
 -> ## A travel through rendering <-
 
@@ -37,7 +37,7 @@ and everything was Server side Rendered (SSR)
 -> # 1995ish <-
 
 Brendan Eich at Netscape changed the world
-But the world hadn't realised yet
+But the world hadn't realized yet
 Also _php_
 
 The haydays of SSR enriched javascript at the client
@@ -49,8 +49,8 @@ The haydays of SSR enriched javascript at the client
 We've reached client side with Backbone.js, Knockout.js, Angluar.js, React
 (and perhaps a few more)
 
-Multi page applicaiton (MPA) and SSR was so old
-Single page application (SPA) with client side rendering (CSR) :heart:
+Multi page application (MPA) and SSR was so old
+Single page application (SPA) with client side rendering (CSR) 🫶
 
 Honestly speaking, this is now. Strim.Play is a SPA with CSR
 
@@ -103,7 +103,7 @@ Instead of hydrating the entire app, why on only hydrate the dynamic parts?
 I'll be using Astro for this, but if you are really cool
 maybe you think 13 year old Node.js C/C++ isn't hype enough..
 
-Deno Fresh might be for you, thats only 4 years old and written in rust :love:
+Deno Fresh might be for you, thats only 4 years old and written in rust ❤️
 
 [https://rendertime-islands.vercel.app/](https://rendertime-islands.vercel.app/)
 
@@ -121,13 +121,13 @@ How about just using HTML?
 
 -> # What even <-
 
-| When    | When                 |     HTML     |              JS |
+| When    | What                 |     HTML     |              JS |
 | ------- | -------------------- | :----------: | --------------: |
 | 1991    | HTML/CSS             |     Yes      |              No |
 | 1995    | jQuery               |     Yes      |            Some |
 | 2010    | backbone/knockout/.. |      No      |      Yes, a lot |
 | 2012ish | React/Vue/Angular    |  No, 457 B   | Yes, 12.41 KB\* |
-| 2020    | Next.js              | Yes, 1.21 KB | Yes, 244 KB\*\* |
+| 2020    | Next.js/Remix        | Yes, 1.21 KB | Yes, 244 KB\*\* |
 | 2020    | Astro/Deno Fresh     | Yes, 1.97 KB |   Yes, 11.75 KB |
 | 2020    | qwik                 | Yes, 2.88 KB |   No, JIT: 937B |
 
@@ -137,32 +137,41 @@ So it isn't the most fair comparing ever
 
 ---
 
+-> # What to use when <-
+
+| What                 |                      When                      |
+| -------------------- | :--------------------------------------------: |
+| HTML/CSS             |              You live in the past              |
+| jQuery               |                 You like pain                  |
+| backbone/knockout/.. |             You have a legacy app              |
+| React/Vue/Angular    |           Performance doesn't matter           |
+| Next.js/Remix        |            Kinda the default choice            |
+| Astro/Deno Fresh     | You have a partial static partial dynamic site |
+| qwik                 | You like the bleeding edge, also mostly static |
+
+---
+
 -> # Wrapitup <-
-
-It's time to rewrite everything then?
-
----
-
--> # Wrapitup contine <-
-
-No
-
----
-
--> # Wrapitup contine <-
 
 But we have a lot of tools we can use now
 So we can tailor our apps based on our customers needs
-without sacreficing the DX
+without sacrificing the DX
 
 ---
 
--> # Wrapitup contine <-
+-> # Wrapitup continue <-
 
 The code:
 
-[https://github.com/lfbergee/rendertime](https://github.com/lfbergee/rendertime)
+- [https://github.com/lfbergee/rendertime](https://github.com/lfbergee/rendertime)
 
 The slides:
 
-[https://github.com/lfbergee/presentations](https://github.com/lfbergee/presentations)
+- [https://github.com/lfbergee/presentations](https://github.com/lfbergee/presentations)
+
+The apps:
+
+- [https://rendertime-client-side.vercel.app/](https://rendertime-client-side.vercel.app/)
+- [https://rendertime-server-side.vercel.app/](https://rendertime-server-side.vercel.app/)
+- [https://rendertime-islands.vercel.app/](https://rendertime-islands.vercel.app/)
+- [https://rendertime.pages.dev/](https://rendertime.pages.dev/)
