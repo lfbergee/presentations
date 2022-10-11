@@ -1,8 +1,8 @@
 %title: A travel through rendering
 %author: lfberge
-%date: 2022-03-16
+%date: 2022-10-27
 
--> # dev/lett/øl <-
+-> # dev/øl <-
 
 -> ## A travel through rendering <-
 
@@ -46,7 +46,7 @@ The haydays of SSR enriched javascript at the client
 
 -> # 2010ish <-
 
-We've reached client side with Backbone.js, Knockout.js, Angluar.js, React 
+We've reached client side with Backbone.js, Knockout.js, Angluar.js, React
 (and perhaps a few more)
 
 Multi page applicaiton (MPA) and SSR was so old
@@ -66,7 +66,7 @@ Lets demo this in 2022 form
 
 -> # 2016ish <-
 
-Vercel starts a server hosting platform 
+Vercel starts a server hosting platform
 and figures wouldn't we make a lot more money
 if we move most of the work from the client
 to our server farm?
@@ -77,13 +77,13 @@ And Next.js was born
 
 -> # 2016ish continue <-
 
-So lets run our JS code on the server SSR and/or SSG, 
+So lets run our JS code on the server SSR and/or SSG,
 and sending the HTML over the wire,
 then hydrate the JS so the app works
 
 New open strim.no webapp does this
 
-[https://vercel.com/lfbergee/rendertime-server-side](https://vercel.com/lfbergee/rendertime-server-side)
+[https://rendertime-server-side.vercel.app/](https://rendertime-server-side.vercel.app/)
 
 ---
 
@@ -116,6 +116,24 @@ So how could we improve over islands?
 How about just using HTML?
 
 [https://rendertime.pages.dev/](https://rendertime.pages.dev/)
+
+---
+
+-> # What even <-
+
+| When    | When                 |     HTML     |              JS |
+| ------- | -------------------- | :----------: | --------------: |
+| 1991    | HTML/CSS             |     Yes      |              No |
+| 1995    | jQuery               |     Yes      |            Some |
+| 2010    | backbone/knockout/.. |      No      |      Yes, a lot |
+| 2012ish | React/Vue/Angular    |  No, 457 B   | Yes, 12.41 KB\* |
+| 2020    | Next.js              | Yes, 1.21 KB | Yes, 244 KB\*\* |
+| 2020    | Astro/Deno Fresh     | Yes, 1.97 KB |   Yes, 11.75 KB |
+| 2020    | qwik                 | Yes, 2.88 KB |   No, JIT: 937B |
+
+\*This will grow when the app grows faster than everyone else
+\*\*Next.js has batteries includes, and uses React instead of Preact
+So it isn't the most fair comparing ever
 
 ---
 
