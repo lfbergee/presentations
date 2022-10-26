@@ -1,12 +1,12 @@
-%title: A travel through rendering
+%title: Time traveling through HTML rendering
 %author: lfberge
 %date: 2022-10-27
 
 -> # dev/🍺 <-
 
--> ## A travel through rendering <-
+-> ## Time traveling through HTML rendering <-
 
--> _Where should we turn javascript to HTML?_ <-
+-> _Where should we create our HTML?_ <-
 
 ---
 
@@ -27,14 +27,14 @@
 
 ---
 
--> # 1991 <-
+-> # 1991: The beginning <-
 
 Where the developer was the Static Site Generator (SSG)
 and everything was Server side Rendered (SSR)
 
 ---
 
--> # 1995ish <-
+-> # 1995ish: Javascript <-
 
 Brendan Eich at Netscape changed the world
 But the world hadn't realized yet
@@ -44,9 +44,18 @@ The haydays of SSR enriched javascript at the client
 
 ---
 
--> # 2010ish <-
+-> # 2005ish: The integrated servers <-
 
-We've reached client side with Backbone.js, Knockout.js, Angluar.js, React
+Ruby on Rails, AST.net and so on brings lots of new stuff
+Dreamweaver and FrontPage changed the way we created HTML
+
+jQuery begins to utilize the power of JS to actually change the world
+
+---
+
+-> # 2010ish: The frameworks <-
+
+We've reached client side with Backbone.js, Knockout.js, Angular.js, React
 (and perhaps a few more)
 
 Multi page application (MPA) and SSR was so old
@@ -64,7 +73,7 @@ Lets demo this in 2022 form
 
 ---
 
--> # 2016ish <-
+-> # 2016ish: The meta-frameworks <-
 
 Vercel starts a server hosting platform
 and figures wouldn't we make a lot more money
@@ -87,7 +96,7 @@ New open strim.no webapp does this
 
 ---
 
--> # 2020ish <-
+-> # 2020ish: The islands <-
 
 What if doing both SSR and CSR is double the work?
 Maybe we don't always need a SPA? Was 1991 right all along?
@@ -109,31 +118,13 @@ Deno Fresh might be for you, thats only 4 years old and written in rust ❤️
 
 ---
 
--> # 2022ish <-
+-> # 2022ish: The future? <-
 
 So how could we improve over islands?
 
 How about just using HTML?
 
 [https://rendertime.pages.dev/](https://rendertime.pages.dev/)
-
----
-
--> # What even <-
-
-| When    | What                 |     HTML     |              JS |
-| ------- | -------------------- | :----------: | --------------: |
-| 1991    | HTML/CSS             |     Yes      |              No |
-| 1995    | jQuery               |     Yes      |            Some |
-| 2010    | backbone/knockout/.. |      No      |      Yes, a lot |
-| 2012ish | React/Vue/Angular    |  No, 457 B   | Yes, 12.41 KB\* |
-| 2020    | Next.js/Remix        | Yes, 1.21 KB | Yes, 244 KB\*\* |
-| 2020    | Astro/Deno Fresh     | Yes, 1.97 KB |   Yes, 11.75 KB |
-| 2020    | qwik                 | Yes, 2.88 KB |   No, JIT: 937B |
-
-\*This will grow when the app grows faster than everyone else
-\*\*Next.js has batteries includes, and uses React instead of Preact
-So it isn't the most fair comparing ever
 
 ---
 
@@ -148,14 +139,6 @@ So it isn't the most fair comparing ever
 | Next.js/Remix        |            Kinda the default choice            |
 | Astro/Deno Fresh     | You have a partial static partial dynamic site |
 | qwik                 | You like the bleeding edge, also mostly static |
-
----
-
--> # Wrapitup <-
-
-But we have a lot of tools we can use now
-So we can tailor our apps based on our customers needs
-without sacrificing the DX
 
 ---
 
